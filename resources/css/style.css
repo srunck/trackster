@@ -1,3 +1,100 @@
 /*
   Custom styles for Trackster App
 */
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: white;
+  min-width: 570px;
+  font-family: "Righteous", sans-serif;
+  line-height: 2.5;
+  color: #4a4a4a;
+  margin: 0;
+}
+.container-fluid {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.header {
+  background-color: rgb(35, 2, 63);
+  padding: 2.75rem 0;
+}
+
+.header h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: "Righteous", cursive;
+    color: #ff00ab;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.header input {
+  border-radius: 19px;
+  margin-right: .625rem;
+}
+
+.header .fa-search {
+  padding: .5rem;
+  border-radius: 19px;
+  text-align: center;
+  background-color: #ff00ab;
+  color: #22013f;
+}
+
+.header .fa-search:hover {
+  background-color: rgb(255,102,204);
+  cursor: pointer;
+}
+
+.header input {
+  border-radius: 19px;
+  margin-right: .625rem;
+  color: rgb(191,191,191);
+}
+
+.track:hover {
+  background-color: rgb(239, 237, 242);
+}
+
+.attributes {
+  background-color: #6800ff;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+.track {
+  display: flex;
+  padding: .6rem;
+  border-bottom: 1px solid #cccccc;
+  line-height: 1;
+}
+
+.track div {
+  display: flex;
+  align-items: center;
+}
+
+#track-title {
+  padding-left: 0;
+}
+
+#track-album {
+  padding-left: 25px;
+}
+
+#track-popularity {
+  padding-left: 32px;
+}
+
+.fa-play-circle-o {
+  color: rgb(255,0,171);
+}
