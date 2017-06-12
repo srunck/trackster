@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
   var Trackster = {};
+  var API_KEY = "f829e7e6646f98349aa3c64cb1b2999c";
 
 
   /*
@@ -13,7 +14,7 @@ $(document).ready(function () {
 
     var xlimit = tracks.tracks.limit;
     console.log(xlimit);
-    console.log(tracks);
+    // console.log(tracks);
 
     for(i=0; i<xlimit; i++) {
       var xprev = tracks.tracks.items[i].preview_url;
@@ -21,6 +22,7 @@ $(document).ready(function () {
       var xartist = tracks.tracks.items[i].artists[0].name;
       var xalbum = tracks.tracks.items[i].album.name;
       var xpopularity = tracks.tracks.items[i].popularity;
+
       // console.log(xprev);
       // console.log(xtitle);
       // console.log(xartist);
@@ -44,8 +46,16 @@ $(document).ready(function () {
   */
   Trackster.searchTracksByTitle = function(title) {
     $.ajax({
-      url:'https://api.spotify.com/v1/search?type=track&q=' + title,
+      // url:'https://api.spotify.com/v1/search?type=track&q=' + title,
+      // success: function(data) {
+      console.log("hi there");
+
+      // url:'http://ws.audioscrobbler.com/2.0/?method=track.search&track=proud+mary&api_key=f829e7e6646f98349aa3c64cb1b2999c&format=json' + title,
+
+
+      url:'http://ws.audioscrobbler.com/2.0/?method=track.search&track=' + title + '&api_key=f829e7e6646f98349aa3c64cb1b2999c&format=json',
       success: function(data) {
+
         // console.log(data);
         Trackster.renderTracks(data)
       }
