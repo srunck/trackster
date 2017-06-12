@@ -10,12 +10,10 @@ $(document).ready(function () {
     Append each "row" to the container in the body to display all tracks.
   */
   Trackster.renderTracks = function(tracks) {
-    console.log(tracks);
     $( "#track-list" ).empty();
 
     // var xlimit = tracks.tracks.limit;
     var xlimit = tracks.results["opensearch:itemsPerPage"];
-    alert(xlimit);
     // console.log(tracks);
 
     for(i=0; i<xlimit; i++) {
@@ -24,7 +22,6 @@ $(document).ready(function () {
 //      alert(xtitle);
       var xartist = tracks.results.trackmatches.track[i].artist;
     var xalbum = tracks.results.trackmatches.track[i].image[0]["#text"];
-    alert(xalbum);
       var xpopularity = tracks.results.trackmatches.track[i].listeners;
 
       // var xprev = tracks.tracks.items[i].preview_url;
